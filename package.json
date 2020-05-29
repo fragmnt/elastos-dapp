@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:fragmnt/elastos-dapp.git",
-  "author": "gsims <4537336-sznlabs@users.noreply.gitlab.com>",
+  "author": "gsims <>",
   "license": "MIT",
   "scripts": {
     "dev": "next",
