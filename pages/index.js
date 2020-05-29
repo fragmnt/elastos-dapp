@@ -4,6 +4,7 @@ import Router from 'next/router';
 
 import Web3 from 'web3';
 import Modal from '../components/Modal';
+import Navbar from '../components/Navbar';
 
 class IndexPg extends Component {
 
@@ -12,11 +13,14 @@ class IndexPg extends Component {
 		this.state = {
 			isLoggedIn: false,
 			toggled: false,
+			walletAddress: null
 		}
 		this.connectWallet = this.connectWallet.bind(this);
 		this.checkAuth = this.checkAuth.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
+
+		this.logout = this.logout.bind(this);
 	}
 
 	connectWallet = async () => {
@@ -27,7 +31,7 @@ class IndexPg extends Component {
 			await eth.enable();
 			const accounts = await web3.eth.getAccounts();
 			
-			this.setState({ account: accounts[0] });
+			this.setState({ walletAddress: accounts[0] });
 			localStorage.setItem('account', accounts[0]);
 			Router.push('/dashboard');
 
@@ -44,7 +48,7 @@ class IndexPg extends Component {
 		var account = await localStorage.getItem('account');
 		await account ? this.setState({ isLoggedIn: true }) : this.setState({ isLoggedIn: false});
 		if (this.state.isLoggedIn === true) {
-			console.log('is logged in')
+			this.setState({ walletAddress: account });
 			// pass address to navbar
 		} else {
 			return;
@@ -61,8 +65,13 @@ class IndexPg extends Component {
 		});
 	}
 
+	logout = () => {
+		localStorage.clear();
+		// refresh page or window
+	}
+
 	componentDidMount = () => {
-		window.document.title = "Elastic Storage";
+		window.document.title = "ElastStorage";
 		this.checkAuth();
 	}
 
@@ -73,6 +82,11 @@ class IndexPg extends Component {
 	render() {
 		return (
 		<>
+			<Navbar
+				loggedIn={this.state.isLoggedIn}
+				logout={this.logout}
+				address={this.state.walletAddress}
+			/>
 			{this.state.toggled ? <Modal connect={this.connectWallet} close={this.closeModal}/> : null}
 			<h1>Elastic Storage</h1>
 			<p>A elastOS dApp built on top of Ionic and Hive with Trinity plugins.</p>
