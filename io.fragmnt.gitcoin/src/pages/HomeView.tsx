@@ -14,8 +14,6 @@ import {
 import React from 'react';
 import './HomeView.css';
 
-declare let appManager: AppManagerPlugin.AppManager;
-
 class HomeView extends React.Component {
   render() {
     return (
@@ -27,7 +25,7 @@ class HomeView extends React.Component {
       </IonHeader>
       <IonContent>
         <IonCard className="welcome-card">
-          <img src="/assets/shapes.svg" alt="" />
+          {/* <img src="../static/placeholders/shapes.svg" alt="" /> */}
           <IonCardHeader>
             <IonCardSubtitle>Get Started</IonCardSubtitle>
             <IonCardTitle>Welcome to Signal!</IonCardTitle>
@@ -40,18 +38,11 @@ class HomeView extends React.Component {
 
               A default header-bar-component has been created to show you how to use custom UI components. That components also makes use of Trinity's AppService plugin as a sample.
             </p>
-            
-            <IonButton onClick={this.closeApp}>Close the app</IonButton>
           </IonCardContent>
         </IonCard>
       </IonContent>
     </IonPage>
     );
-  }
-
-  closeApp() {
-    console.log("dApp is closing!")
-    appManager.close();
   }
 }
 

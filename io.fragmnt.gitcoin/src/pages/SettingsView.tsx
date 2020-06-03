@@ -6,7 +6,15 @@ import { IonContent,
   IonButton
 } from '@ionic/react';
 
-const SettingsView: React.FC = () => {
+declare let appManager: AppManagerPlugin.AppManager;
+
+const SettingsView: React.FC = (props) => {
+  
+  const closeApp = () => {
+    console.log("dApp is closing!")
+    appManager.close();
+  }
+
   return (
     <IonPage>
       <IonHeader>
@@ -17,6 +25,8 @@ const SettingsView: React.FC = () => {
       <IonContent>
         <p>Configure your Signal settings here</p>
         <IonButton routerLink="/homeview">Reload the application</IonButton>
+        <p>Finish with the application.</p>
+        <IonButton onClick={closeApp}>Close the app</IonButton>
       </IonContent>
     </IonPage>
   );
