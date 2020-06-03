@@ -10,11 +10,18 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { apps, flash, send } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import { apps, flash, keypad, gitMerge } from 'ionicons/icons';
+
+// Views
+
+import HomeView from './pages/HomeView';
+import IdentityView from './pages/IdentityView';
+import ConnView from './pages/ConnView';
+import SettingsView from './pages/SettingsView';
+
+// View Components
 import Details from './pages/Details';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,27 +46,35 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
+
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
-          <Route path="/tab2/details" component={Details} />
-          <Route path="/tab3" component={Tab3} />
-          <Route exact path="/" render={() => <Redirect to="/tab1" />} />
+          <Route path="/homeview" component={HomeView} exact={true} />
+          <Route path="/idview" component={IdentityView} exact={true} />
+          <Route path="/idview/details" component={Details} />
+          <Route path="/connview" component={ConnView} />
+          <Route path='/settingsview' component={SettingsView} />
+          <Route exact path="/" render={() => <Redirect to="/homeview" />} />
         </IonRouterOutlet>
+
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="homeview" href="/homeview">
             <IonIcon icon={flash} />
-            <IonLabel>Tab One</IonLabel>
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="idview" href="/idview">
             <IonIcon icon={apps} />
-            <IonLabel>Tab Two</IonLabel>
+            <IonLabel>Your Identities</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={send} />
-            <IonLabel>Tab Three</IonLabel>
+          <IonTabButton tab="connview" href="/connview">
+            <IonIcon icon={gitMerge} />
+            <IonLabel>Connections</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="settingsview" href="/settingsview">
+            <IonIcon icon={keypad} />
+            <IonLabel>Settings</IonLabel>
           </IonTabButton>
         </IonTabBar>
+
       </IonTabs>
     </IonReactRouter>
   </IonApp>

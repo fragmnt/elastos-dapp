@@ -12,11 +12,11 @@ import {
   IonButton
 } from '@ionic/react';
 import React from 'react';
-import './Tab1.css';
+import './HomeView.css';
 
 declare let appManager: AppManagerPlugin.AppManager;
 
-class Tab1 extends React.Component {
+class HomeView extends React.Component {
   render() {
     return (
       <IonPage>
@@ -55,4 +55,4 @@ class Tab1 extends React.Component {
   }
 }
 
-export default Tab1;
+export default HomeView;
