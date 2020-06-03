@@ -1,4 +1,4 @@
-<img src="./io.fragmnt.gitcoin/src/assets/appIcon.png" width="44px" height="44px"/>
+<img src="./io.fragmnt.gitcoin/src/static/appIcon.png" width="44px" height="44px"/>
 
 ## Signal
 
