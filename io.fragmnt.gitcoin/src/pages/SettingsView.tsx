@@ -11,11 +11,11 @@ const SettingsView: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>AppName Settings</IonTitle>
+          <IonTitle>Signal App Settings</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <p>Configure your AppName settings here</p>
+        <p>Configure your Signal settings here</p>
         <IonButton routerLink="/homeview">Reload the application</IonButton>
       </IonContent>
     </IonPage>

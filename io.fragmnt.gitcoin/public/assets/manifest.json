@@ -1,15 +1,15 @@
 {
-  "id": "io.fragmnt.gitcoin",
+  "id": "io.fragmnt.signal",
   "version": "0.0.1",
   "version_code": 1,
   "name": "Signal",
   "short_name": "signal",
-  "short_description": "A submission for the GitCoin bounty",
-  "description": "",
+  "short_description": "Decentralized identity management and storage.",
+  "description": "Identity management and decentralized storage.",
   "start_url": "index.html",
   "type": "app",
   "start_visible": "hide",
-  "category": "finance",
+  "category": "storage",
   "icons": [
     {
       "src": "assets/images/logo.png",
@@ -31,10 +31,7 @@
     "Device",
     "NetworkStatus"
   ],
-  "urls": [
-    "http://www.yourappserver.com/*"
-  ],
-  "background_color": "#4e8ef7",
+  "background_color": "#111D12",
   "theme_display": "show",
-  "theme_color": "#4e8ef7"
+  "theme_color": "#742eff"
 }

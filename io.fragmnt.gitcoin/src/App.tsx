@@ -10,7 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { apps, flash, keypad, gitMerge } from 'ionicons/icons';
+import { apps, home, keypad, gitMerge } from 'ionicons/icons';
 
 // Views
 
@@ -58,7 +58,7 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="homeview" href="/homeview">
-            <IonIcon icon={flash} />
+            <IonIcon icon={home} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="idview" href="/idview">

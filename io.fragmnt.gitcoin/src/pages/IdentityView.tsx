@@ -11,7 +11,7 @@ const IdentityView: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>About AppName</IonTitle>
+          <IonTitle>Identity Management</IonTitle>
           
         </IonToolbar>
       </IonHeader>

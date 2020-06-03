@@ -30,7 +30,7 @@ class HomeView extends React.Component {
           <img src="/assets/shapes.svg" alt="" />
           <IonCardHeader>
             <IonCardSubtitle>Get Started</IonCardSubtitle>
-            <IonCardTitle>Welcome to Elastos!</IonCardTitle>
+            <IonCardTitle>Welcome to Signal!</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <p>
