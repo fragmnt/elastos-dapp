@@ -3,9 +3,23 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 
+h2 {
+  color: #FFF;
+  font-weight: 800;
+}
 p {
   color: #FFF;
 } 
+
+.ion-title.welcome {
+  font-size: 72px;
+  color: #FFF;
+}
+
+.inputBrk {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
 .toolbar-title {
   color: #FFF;

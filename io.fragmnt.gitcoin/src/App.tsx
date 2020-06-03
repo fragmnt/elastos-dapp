@@ -21,6 +21,7 @@ import SettingsView from './pages/SettingsView';
 
 // View Components
 import Details from './pages/Details';
+import AddNewId from './components/AddNewId';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -50,7 +51,11 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/homeview" component={HomeView} exact={true} />
           <Route path="/idview" component={IdentityView} exact={true} />
+
+
           <Route path="/idview/details" component={Details} />
+          <Route path='/idview/create' component={AddNewId} />
+
           <Route path="/connview" component={ConnView} />
           <Route path='/settingsview' component={SettingsView} />
           <Route exact path="/" render={() => <Redirect to="/homeview" />} />

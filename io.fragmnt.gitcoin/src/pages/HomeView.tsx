@@ -27,7 +27,6 @@ class HomeView extends React.Component {
         <IonCard className="welcome-card">
           {/* <img src="../static/placeholders/shapes.svg" alt="" /> */}
           <IonCardHeader>
-            <IonCardSubtitle>Get Started</IonCardSubtitle>
             <IonCardTitle>Welcome to Signal!</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
@@ -40,6 +39,8 @@ class HomeView extends React.Component {
             </p>
           </IonCardContent>
         </IonCard>
+
+
       </IonContent>
     </IonPage>
     );

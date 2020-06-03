@@ -6,7 +6,8 @@ import { IonContent,
   IonButton
 } from '@ionic/react';
 
-const IdentityView: React.FC = () => {
+const IdentityView: React.FC = (props) => {
+  const hasIdentities = false;
   return (
     <IonPage>
       <IonHeader>
@@ -16,8 +17,14 @@ const IdentityView: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <p>AppName is a innovative concept for elastOS.</p>
-        <IonButton routerLink="/idview/details">Read more details</IonButton>
+        {hasIdentities ? <p>ok</p> : 
+        <>
+          <img src=""/>
+          <h2>No identities found</h2>
+          <p>You have no personas yet. Create one and it will show up here.</p> 
+        </>
+        }
+        <IonButton routerLink="/idview/create">Add a new identity</IonButton>
       </IonContent>
     </IonPage>
   );
